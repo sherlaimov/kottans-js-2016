@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Десять типичных вопросов на собеседованиях на знание HTML</title>
+</head>
+<body>
+	<header>
+		<aside class=habr-affiliates>
+			<ul>
+				<li><a href="#">TM Feed</a></li>
+				<li><a href="#">Хабразабр</a></li>
+				<li><a href="#">GeekTimes</a></li>
+				<li><a href="#">Тостер</a></li>
+				<li><a href="#">Мой круг</a></li>
+				<li><a href="#">Фрилансим</a></li>		
+			</ul>
+			<ul>
+				<li>Спецпроекты:</li>
+				<li><a href="#">Контент-маркетинг</a></li>
+				<li><a href="#">Создайте первую иру</a></li>
+				<li><a href="#">Дзен на дорогах</a></li>
+			</ul>
+		</aside>
+		<nav>
+			<aside class=navbar-static>
+				<ul>
+					<li><a href="#" class=logo></a></li>
+					<li><a href="#" class="nav-menu"><span class=icon></span></a></li>
+					<li><a href="#" class="login"><span class=icon></span></a></li>
+				</ul>
+			</aside>
+			<menu>
+				<div class=title>Разделы</div>
+				<form action="#">
+					<input type="text" placeholder="Поиск">
+				</form>
+				<ul>
+					<li><a href="#">Публикации</a></li>
+					<li><a href="#">Хабы</a></li>
+					<li><a href="#">Компании</a></li>
+					<li><a href="#">Пользователи</a></li>
+					<li><a href="#">Песочница</a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+				<hr>
+				<div class="special-projects">Спецпроекты</div>
+				<ul>
+					<li><a href="#">Соберите свой стартап</a></li>
+					<li><a href="#">Linux в Azure</a></li>
+					<li><a href="#">Создай игру</a></li>
+				</ul>
+			</menu>
+		</nav>
+	</header>
+	
+	<main>
+		<section class="author">
+			<figure>
+				<a href="">	<img src="" alt=""></a>
+				<figcaption><a href="#">@rayproud</a>Пользователь</figcaption>
+			</figure>
+			<data>карма</data><br>
+			<data>рейтинг</data><br>
+			<ul>
+				<li><a href="#"><span class="counter"></span>Профиль</a></li>
+				<li><a href="#"><span class="counter"></span>Комментарии</a></li>
+				<li><a href="#"><span class="counter"></span>Избранное</a></li>
+				<li><a href="#"><span class="counter"></span>Подписчики</a></li>
+			</ul>
+		</section>
+		<article>
+			<time>3 декабря 2014 в 16:57</time>
+			<h1><a href="#">Разработка</a><span class="icon-arrow">&nbsp;→</span>Десять типичных вопросов на собеседованиях на знание HTM &nbsp;<mark><a href="#">из песочницы</a></mark></h1>
+			<div class="hubs">
+				<ul>
+					<li><a href="#">HTML,</a></li>
+					<li><a href="#">Семантика,</a></li>
+					<li><a href="#">Разработка веб-сайтов</a></li>
+				</ul>
+			</div>
+			<p>Аурэлио Де Роза несколько дней назад выпустил, на мой взгляд, очень привлекательную статью, которой я хочу с вами поделиться на тот случай, если у вас плохо с английским. </p>
+			<hr>
+			<p>Несколько недель назад на SitePoint были опубликованы две мои статьи, в которых я рассмотрел наиболее часто задаваемые на собеседовании вопросы по JavaScript (в случае, если вы пропустили: «5 Typical JavaScript Interview Exercises» и «5 More JavaScript Interview Exercises»).</p>
+			<p>Обе эти статьи имели огромный успех, что было крайне неожиданным. Я решил, что пришло время написать подобную статью, но уже на тему HTML — и вот, что у меня получилось.</p>
+			<section>
+				<h1>Валидация разметки</h1>
+				<p>Рассмотрим следующую разметку:</p>
+				<pre>
+					<code>
+						<figure>
+							<picture>
+								<source media="(min-width: 40em)"
+								srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320y">
+								<img src="medium.jpg" alt="London by night">
+							</picture>
+							<figcaption>A landscape of London by night</figcaption>
+						</figure>
+					</code>		
+				</pre>
+				<p>Валидный ли это код? Поясните, почему.</p>
+				<section>
+					<h1>Ответ</h1>
+					<p>В разметке используется тэг picture, который совсем недавно вошел в спецификацию. Код валидный вплоть до последнего изображения в атрибуте <code>srcset; </code> 320y — невалидное значение. Если изменить y на w, то код будет валидным полностью.</p>
+				</section>
+			</section>
+			<section>
+				<h1>Элемент <code>main</code></h1>
+				<p>Дайте определение элементу <code> main</code>. Какова его цель? Сходятся ли в определении этого элемента спецификации W3C и WHATWG?</p>
+				<section>
+					<h1>Ответ</h1>
+					<p><code>main</code> элемент не имеет единого определения и в каждой спецификации оно разное.</p>
+					<p>Спецификация W3C описывает элемент как главное содержание страницы, то есть контент, который описывает основную тему страницы или является ключевым элементом функциональности приложения. В спецификации также говорится, что на странице не может быть больше одного main элемента.</p>
+					<p>Спецификация WHATWG не наделяет тэг main какой-либо семантикой и описывает элемент как контейнер для главенствующего содержания какого либо элемента. Также, согласно WHATWG, вам не запрещается иметь на одной странице несколько элементов main. Если у вас имеется несколько article элементов на странице, то вы можете выделить главенствующее содержимое каждого article с помощью тэга main.</p>
+				</section>
+			</section>
+			<section>
+				<h1>WAI-ARIA</h1>
+				<p>Рассмотрим следующую разметку:</p>
+				<pre><code>
+					<header>
+						<h1>Main title</h1>
+						<form action="/" method="get">
+							<input type="search">
+							<input type="submit">
+						</form>
+					</header>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/products">Products</a></li>
+						<li><a href="/about">About</a></li>
+					</ul>
+					<main>
+						<article>
+							<h1>Main title</h1>
+							<p>This is the content of this section</p>
+						</article>
+					</main>
+					<footer>
+						<small>Copyright &copy; Aurelio De Rosa 2014</small>
+					</footer>
+				</code></pre>
+				<p>Можете ли вы улучишь доступность разметки с помощью WAI-ARIA ролей, где это возможно, учитывая старые технологии?</p>
+				<section>
+					<h1>Ответ</h1>
+					<p>Код должен быть переписан следующим образом:</p>
+					<pre><code>
+						<header role="header">
+							<h1>Main title</h1>
+							<form action="/" method="get" role="search">
+								<label for="search">Search:</label>
+								<input id="search" type="search">
+								<input type="submit">
+							</form>
+						</header>
+						<nav role="navigation">
+							<ul>
+								<li><a href="/">Home</a></li>
+								<li><a href="/products">Products</a></li>
+								<li><a href="/about">About</a></li>
+							</ul>
+						</nav>
+						<main role="main">
+							<article role="article">
+								<h1>Main title</h1>
+								<p>This is the content of this section</p>
+							</article>
+						</main>
+						<footer role="contentinfo">
+							<small>Copyright &copy; Aurelio De Rosa 2014</small>
+						</footer>
+					</code></pre>
+				</section>
+				<p>Чтобы улучшить доступность, список навигации был помещен в тэг nav. Чтобы улучшить доступность для старых технологий, которые не поддерживают новые семантичные тэги, роли header, navigation, main, article, и contentinfo были добавлены элементам header, nav, main, article, и footer соответственно.</p>
+				<p>Другое улучшение касается формы поиска. Сначала форме была добавлена роль search. После чего был добавлен элемент label, который связан с элементом input с помощью атрибута for.</p>
+			</section>
+			<section>
+				<h1>Элемент <code>small</code></h1>
+				<p>Расскажите, в каких случаях уместно использование элемента small и приведите пример.</p>
+				<section>
+					<h1>Ответ</h1>
+					<p>Элемент small был представлен в HTML 4.01 и предназначался для того, чтобы делать текст маленьким. В HTML5 этому тэгу придали семантическое значение и рекомендуют помещать в него различного рода предупреждения, юридические текст и прочее, что должно быть написано «мелким шрифтом». При этом текст может выглядеть маленьким, но это уже не обязательно.</p>
+					<p>Пример использования приведен ниже:</p>
+					<pre><code>
+						<img src="image.jpg" alt="London by night">
+						<small>Права на это изображение являются собственностью Аурелио Де Роза.</small>
+					</code></pre>				
+				</section>
+			</section>
+			<aside class=related-articles>
+				<ul>
+					<li><a href=""> <q> Импортозаместить</q> Google: ФАС наносит ответный удар</a><span class="comments-counter"></span></li>
+					<li><a href="">Новая жертва: Еврокомиссия обвинила Qualcomm в нарушении антимонопольного законодательства  </a><span class="comments-counter"></span></li>
+					<li><a href="">ФАС признала Google нарушителем антимонопольного законодательства  </a><span class="comments-counter"></span></li>
+					<li><a href="">Крупнейший фотобанк мира Getty Images обвинил Google в нарушении антимонопольного законодательства: пользователи берут изображения из выдачи поисковика </a><span class="comments-counter"></span></li>
+					<li><a href="">Еврокомиссия хочет поставить точку в антимонопольном деле Google</a><span class="comments-counter"></span></li>
+				</ul>
+			</aside>
+			<aside class=article-tags>
+				<ul>
+					<li><a href="#">семантика</a></li>
+					<li><a href="#">html5</a></li>
+					<li><a href="#">стандарты и спецификации</a></li>
+					<li><a href="#"> собеседование вопросы</a></li>
+					<li><a href="#">перевод</a></li>
+					<li><a href="#">перевод с английского</a></li>
+				</ul>
+			</aside>
+			<aside class=article-info>
+				<section class="article-stats">
+					<ul>
+						<li>
+							<button class=up-vote><span>↑</span></button>
+							<span class="article-votes"></span>
+							<button class=down-vote><span>↑</span></button>
+						</li>
+						<li><span class=article-views></span></li>
+						<li><button class=article-favs></button></li>
+						<li class=social-media-share>
+							<ul>
+								<li><a href="#" class=twitter></a></li>
+								<li><a href="#" class=facebook></a></li>
+								<li><a href="#" class=pocket></a></li>
+							</ul>
+						</li>
+					</ul>		
+				</section>
+				<section class="article-author">
+					<figure>
+						<a href="">	<img src="" alt=""></a>
+						<figcaption><a href="#">@rayproud</a></figcaption>
+					</figure>
+					<data>карма</data><br>
+					<data>рейтинг</data><br>
+				</section>
+			</aside>
+		</article>
+		<aside class="most-popular">
+			<header>
+				<h1>Самое читаемое</h1>
+				<nav>
+					<ul>
+						<li><a href="#">Сейчас</a></li>
+						<li><a href="#">Неделя</a></li>
+						<li><a href="#">Месяц</a></li>
+					</ul>
+				</nav>
+			</header>
+			<ul>
+				<li>
+					<data class=article-reviews></data>
+					<a href="#">Совсем не нейронные сети</a>
+					<span class=article-views></span>
+					<span class=article-favs></span>
+					<span class=article-comments-count></span>
+				</li>
+				<li>
+					<data class=article-reviews></data>
+					<a href="#">Swift 3.0, много шума, а что на деле?</a>
+					<span class=article-views></span>
+					<span class=article-favs></span>
+					<span class=article-comments-count></span>
+				</li>
+				<li>
+					<data class=article-reviews></data>
+					<a href="#">Дайджест свежих материалов из мира фронтенда за последнюю неделю №212 (16 — 22 мая 2016)</a>
+					<span class=article-views></span>
+					<span class=article-favs></span>
+					<span class=article-comments-count></span>
+				</li>
+			</ul>
+		</aside>
+		<aside class=article-comments>
+			<article>
+				<h1>Комментарии(42)</h1>
+				<ul class=comments-list>
+					<li>
+						<section class="comment-item">
+							<header>
+								<figure>
+									<a href="#">
+										<img src="">
+									<figcaption class=commentator>rusmvb</figcaption>
+									</a>
+								</figure>
+								<time class="comment-time"> 8 декабря 2014 в 12:01</time>
+								<ul class="comment-controls">
+									<li class=comment-anchor></li>
+									<li class=comment-tree></li>
+									<li class=comment-prev></li>
+								</ul>
+								<ul class=comment-votes>
+									<li class=vote-counter></li>
+									<li><button class=up-vote></button></li>
+									<li><button class=down-vote></button></li>
+								</ul>
+							</header>
+							<p class=comment-body>Полностью согласен, что сложновато. Это больше вопросы не на умение работать с html, а на знание специфических возможностей, которые в большинстве проектов совсем не уместны. На крайний случай в спецификации эти данные можно найти, а не в голове их таскать.</p>
+							<p>Приходилось присутствовать на подобных собеседованиях в качестве слушателя — таких вопросов точно не было ни у кого.</p>
+						</section>
+					</li>
+				</ul>
+			</article>
+		</aside>
+	</main>
+	<aside class=current-buzz>
+		<section>
+			<h1>Что обсуждают</h1>
+			<header>
+				<ul>
+					<li><a href="#">Сейчас</a></li>
+					<li><a href="#">Вчера</a></li>
+					<li><a href="#">Неделя</a></li>
+				</ul>
+			</header>
+			<ul>
+				<li><a href="#">Внимание: ИП в IT под ударом?</a> <span><a href="#" class="comments-anchor comments-counter"></a></span></li>
+				<li><a href="#">Пол Грэм: Пару слов о находчивости (A Word to the Resourceful)</a> <span><a href="#" class="comments-anchor comments-counter"></a></span></li>	
+			</ul>
+		</section>
+	</aside>
+	<footer></footer>
+</body>
+</html>

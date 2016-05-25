@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework 02 | Styling a form</title>
+</head>
+<link rel="stylesheet" type="text/css" href="node_modules/css-reset-and-normalize/css/reset-and-normalize.css">
+<!-- <link rel="stylesheet" type="text/css" href="node_modules/cd-font-awesome/index.css"> -->
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<body>
+	<main>
+		<nav>
+			<ul>
+				<li><a href="#" role=button>Go back</a></li>
+				<li><a href="#" role=button>Sign in</a></li>
+			</ul>
+		</nav>
+		<article>
+			<aside class="order-details clearfix">
+				<section class="breakdown ">
+					<h1><i class="fa fa-file-text" aria-hidden="true"></i> Your order</h1>
+					<dl>
+						<dt>Items</dt>
+						<dd>
+							2 documents
+						</dd>
+					</dl>
+					<dl>
+						<dt>Details</dt>
+						<dd>
+							2 languages
+						</dd>
+					</dl>
+					<dl>
+						<dt>Price</dt>
+						<dd>
+							$ 693.06
+						</dd>
+					</dl>
+					<dl>
+						<dt>Delivery</dt>
+						<dd>
+							48 hours <sup>*</sup>
+						</dd>
+					</dl>
+				</section>
+				<section class="order-buttons">
+					<ul>
+						<li><a href="#" role=button class=place-order>Place order</a></li>
+						<li><a href="#" role=button class=print-quote>Print a Quote</a></li>
+					</ul>
+				</section>
+
+				<section class="help">
+					<h1><i class="fa fa-life-ring" aria-hidden="true"></i>Help center</h1>
+					<p>If you need assistance while placing your order, contact one of our beloved Project Managers by phone or email.</p>
+					<address>
+						<a href="tel: +9710555555">+971(0) &nbsp; 555&nbsp;555</a>
+						<a href="mailto:help@qtest.com">help@test.com</a>
+					</address>
+				</section>
+			</aside>
+			<section class="form-body">
+				<h1>Select what you want to translate</h1>
+				<!-- USE OF LISTS TO STYLE FORMS? -->
+				<form class="order-form" action="" method="post" name="order-form">
+					<fieldset class="translation-type clearfix">
+						<label class="web-translation" for=web-translation>
+							<input type=radio name=translation-type id="web-translation">Website		
+						</label>
+						<label class="doc-translation" for=doc-translation>
+							<input type=radio name=translation-type id="doc-translation" checked="checked">Documents
+						</label>
+						<label class="social-translation" for=social-translation>
+							<input type=radio name=translation-type id="social-translation">Social Account
+						</label>
+					</fieldset>
+					<fieldset>
+						<legend>Upload your documents <small>(Doc, Docx, Text, PDF, Markdown)</small></legend>
+						<input type="file" name="file" id="file"/>
+						<label for="file"><i class="fa fa-cloud-upload" aria-hidden="true"></i>Choose a file</label>
+						<table>
+							<thead>
+								<tr>
+									<th>File name</th>
+									<th>File size</th>
+									<th>Number of words</th>
+									<th>Remove</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>business_operations.docx</td>
+									<td>78kb</td>
+									<td>842</td>
+									<td><i class="fa fa-life-ring" aria-hidden="true"></i></td>
+								</tr>
+								<tr>
+									<td>business_financial.docx</td>
+									<td>26kb</td>
+									<td>2,326</td>
+									<td><i class="fa fa-life-ring" aria-hidden="true"></td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>				
+			</section>
+		</article>
+	</main>
+	
+
+</body>
+</html>
