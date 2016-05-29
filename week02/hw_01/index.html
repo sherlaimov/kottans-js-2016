@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="node_modules/css-reset-and-normalize/css/reset-and-normalize.css">
 <!-- <link rel="stylesheet" type="text/css" href="node_modules/cd-font-awesome/index.css"> -->
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+<script src="test.js"></script>
 <body>
 	<main>
 		<nav>
@@ -63,52 +65,112 @@
 			<section class="form-body">
 				<h1>Select what you want to translate</h1>
 				<!-- USE OF LISTS TO STYLE FORMS? -->
-				<form class="order-form" action="" method="post" name="order-form">
+				<form id="order-form" class="order-form" action="" method="post" name="order-form">
 					<fieldset class="translation-type clearfix">
 						<label class="web-translation" for=web-translation>
-							<input type=radio name=translation-type id="web-translation">Website		
+							<input type=radio name=translation-type id="web-translation"> <span>Website</span>		
+						</label><label class="doc-translation" for=doc-translation>
+						<input type=radio name=translation-type id="doc-translation" checked="checked"><span>Documents</span>
+					</label>
+					<label class="social-translation" for=social-translation>
+						<input type=radio name=translation-type id="social-translation"><span> Social Account</span>
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend><span class="circled-num">1</span>Upload your documents <small>(Doc, Docx, Text, PDF, Markdown)</small></legend>
+					<input type="file" name="file" id="file"/>
+					<label for="file"><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload a new file</label>
+					<table>
+						<thead>
+							<tr>
+								<th>File name</th>
+								<th>File size</th>
+								<th>Number of words</th>
+								<th>Remove</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>business_operations.docx</td>
+								<td>78kb</td>
+								<td>842</td>
+								<td><i class="fa fa-trash" aria-hidden="true"></i></td>
+							</tr>
+							<tr>
+								<td>business_financial.docx</td>
+								<td>26kb</td>
+								<td>2,326</td>
+								<td><i class="fa fa-trash" aria-hidden="true"></td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<fieldset class="lang-pairs">
+					<legend><span class="circled-num">2</span>Choose your language pairs</legend>
+					<span>from</span>
+					<div class="select">
+						<select name=lang form=order-form>
+							<option value=en selected>English</option> 
+							<option value=ru>Russian</option>
+							<option value=ua>German</option>
+						</select>
+					</div>
+					<br><br><br>
+					<span>to</span>
+					<label class="select">
+						<select name=lang form=order-form>
+							<option value=ar selected>Arabic</option> 
+							<option value=fa>Farsi</option>
+							<option value=ua>Ukrainian</option>
+						</select>
+					</label>
+					<label class="select">
+						<select name=lang form=order-form>
+							<option value=ar selected>Kurdish</option> 
+							<option value=fa>Farsi</option>
+							<option value=ua>Ukrainian</option>
+						</select>
+					</label>
+					<a href="#" role=button><i class="fa fa-trash" aria-hidden="true"></i></a>
+					<button><i class="fa fa-plus" aria-hidden="true"></i>Add</button>
+				</fieldset>
+				<section class="row clearfix">
+					<fieldset class=desired-tone>
+						<legend><span class="circled-num">3</span>Select your desired tone</legend>
+						<label class="friendly-casual" for=friendly-casual>
+							<input type=radio name=desire-tone id="friendly-casual"> <span>Friendly / Casual</span>		
 						</label>
-						<label class="doc-translation" for=doc-translation>
-							<input type=radio name=translation-type id="doc-translation" checked="checked">Documents
+						<label for=corporate-pro>
+							<input type=radio name=desire-tone id="corporate-pro" checked="checked"><span>Corporate / Pro</span>
 						</label>
-						<label class="social-translation" for=social-translation>
-							<input type=radio name=translation-type id="social-translation">Social Account
+						<label for=media-formal>
+							<input type=radio name=desire-tone id=media-formal><span>Media / Formal</span>
 						</label>
 					</fieldset>
-					<fieldset>
-						<legend>Upload your documents <small>(Doc, Docx, Text, PDF, Markdown)</small></legend>
-						<input type="file" name="file" id="file"/>
-						<label for="file"><i class="fa fa-cloud-upload" aria-hidden="true"></i>Choose a file</label>
-						<table>
-							<thead>
-								<tr>
-									<th>File name</th>
-									<th>File size</th>
-									<th>Number of words</th>
-									<th>Remove</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>business_operations.docx</td>
-									<td>78kb</td>
-									<td>842</td>
-									<td><i class="fa fa-life-ring" aria-hidden="true"></i></td>
-								</tr>
-								<tr>
-									<td>business_financial.docx</td>
-									<td>26kb</td>
-									<td>2,326</td>
-									<td><i class="fa fa-life-ring" aria-hidden="true"></td>
-								</tr>
-							</tbody>
-						</table>
+					<fieldset class="urgency">
+						<legend><span class="circled-num">4</span>Tell us how urgent this job is</legend>
+						<div id="range">
+						<input type="range" min=1 max=3 value=2>
+						</div>
+					<section>
+						<h1><i class="fa fa-info-circle" aria-hidden="true"></i>Timeline info</h1>
+						<p class="info-snippet">
+							With an <span>average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
+						</p>
+					</section>
 					</fieldset>
-				</form>				
-			</section>
-		</article>
-	</main>
-	
+				</section>
+					<fieldset class="sign-up">
+						<legend><span class="circled-num">5</span>Sign up and choose your payment method</legend>
+						<p>Already have an account with us? <a href="#">Sign in<a>.</p>
+					</fieldset>
+			</form>				
+		</section>
+	</article>
+
+
+</main>
+
 
 </body>
 </html>
