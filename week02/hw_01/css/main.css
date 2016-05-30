@@ -16,6 +16,7 @@ html{
 
 body {
 	font-family: 'Open sans', Arial, Helvetica, sans-serif;
+	margin-bottom: 6rem;
 }
 
 main{
@@ -28,9 +29,9 @@ h1, h2, h3 {
 	color: #6E768F;
 }
 ul, dl {
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
-p {
+p, a {
 	font-size: 1.5rem;
 	color: #6E768F;
 }
@@ -39,8 +40,7 @@ main article {
 	background-color: #fff;
 	border: .2rem solid #C9D0E1;
 	border-radius: .5rem;
-/*padding: 3.5rem;
-padding-top: 0;*/
+
 }
 
 main nav {
@@ -142,6 +142,7 @@ width:100%;*/
 }
 .order-buttons ul li {
 	margin-bottom: 1rem;
+	/*width: 80%;*/
 }
 
 .order-buttons a[role=button]{
@@ -259,12 +260,15 @@ margin: 2rem auto;
 }
 
 .translation-type input:checked,
-.desired-tone input:checked {
+.desired-tone input:checked,
+.payment-method input:checked {
 	border-radius: 5px;
 	box-shadow: 0px 0px 0px 5px #76A7E1;
 } 
+
 .translation-type input:checked::after,
-.desired-tone input:checked::after {
+.desired-tone input:checked::after,
+.payment-method input:checked::after {
 	display:block;
 }
 .translation-type label:hover{
@@ -277,7 +281,8 @@ margin: 2rem auto;
 }
 
 .translation-type input:after,
-.desired-tone input:after {
+.desired-tone input:after,
+.payment-method input:after {
 	background-image: url('./../img/check_mark.png');
 	background-repeat: no-repeat;
 	content: '';
@@ -400,25 +405,16 @@ tbody tr:hover {
 .select{
 	position: relative;
 	margin-left: 2rem;
-	background: #fff	url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+	background: #F7F7FA url("./../img/arrow_down.png") no-repeat 90% 50%;
+	display: inline-block;
+	width: 20%;
 }
-.select:before
-{
-	content: '';
-	/*background: url(./../img/arrow_down.png) center no-repeat;*/
-	background-image: url(./../img/arrow_down.png);
-	width: 16px;
-	height: 13px;
-	position: absolute;
-	right: 1rem;
-	top: 0;
-	pointer-events: inherit;
-}
+
 select {
 	cursor:pointer;
-	padding: 1.5rem 6rem;
+	padding: 1.5rem 2rem;
 	font-size: 2rem;
-	background: #F7F7FA;
+	background: transparent;
 	color:#9098B8;;
 	border:none;
 	outline:none;
@@ -431,7 +427,7 @@ select {
 	border-radius:4px;
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
-	width: 20%;
+	width: 100%;
 }
 
 
@@ -589,4 +585,126 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 	text-transform: uppercase;
 	color: #EDBE76;
 	font-weight: 600;
+}
+
+.sign-up p, .sign-up a {
+	font-size: 1.8rem;
+}
+.sign-up label {
+	font-size: 1.7rem;
+	display: block;
+	padding-left: 1rem;
+}
+.sign-up p{
+	margin-bottom: 4rem;
+}
+
+.sign-up input {
+	color: #6E768F;
+	outline: 0;
+	padding: 1.2rem 1.5rem;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	border-radius: 5px;
+	border: 1px solid #E1E2E7;
+	font-size: 1.5rem;
+	width: 100%;   
+}
+
+.sign-up li {
+	float: left;
+	width: 30%;
+}
+.sign-up li:first-child {
+	float: none;
+}
+.sign-up li:last-child {
+	margin-left: 2rem;
+}
+
+.payment-method {
+	margin-top: 2rem;
+	width: 70%;
+}
+.payment-method input {
+	margin: 0;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.payment-method label {
+	background-size: 50%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	width: 30%;
+	height: 100px;
+	background-color: #F7F7FA;
+	margin-left: 3.5%;
+	padding: 0;
+	position: relative;
+}
+.payment-method label:first-child{
+	margin: 0;
+}
+
+.bank-card {
+	background-image: url('./../img/bank_card.png');
+}
+.paypal {
+	background-image: url('./../img/paypal.png');
+}
+.amazon {
+	background-image: url('./../img/amazon.png');
+}
+
+.chosen-payment {
+	margin-top: 5rem;
+}
+.chosen-payment li:first-child {
+	float: left;
+}
+
+.chosen-payment li {
+	width: 15%;
+	margin-left: 2rem;
+}
+.chosen-payment li:first-child {
+	width: 40%;
+	margin-left: 0;
+}
+
+#card-num{
+	background: url('./../img/visa.png') 
+	98% 50% / 104px 60px no-repeat;
+	background-size: 16%;
+}
+
+footer {
+	margin-top: 2rem;
+	height: 130px;
+}
+
+footer ul {
+	float: right;
+}
+footer li {
+	float: left;
+	margin-left: 2rem;
+}
+
+footer .order-buttons {
+	width: 100%;
+	border-right: none;
+	padding: 0;
+}
+
+footer label {
+	line-height: 3;
 }

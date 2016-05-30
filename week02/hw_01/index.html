@@ -66,7 +66,7 @@
 				<h1>Select what you want to translate</h1>
 				<!-- USE OF LISTS TO STYLE FORMS? -->
 				<form id="order-form" class="order-form" action="" method="post" name="order-form">
-					<fieldset class="translation-type clearfix">
+					<fieldset class="translation-type">
 						<label class="web-translation" for=web-translation>
 							<input type=radio name=translation-type id="web-translation"> <span>Website</span>		
 						</label><label class="doc-translation" for=doc-translation>
@@ -117,20 +117,20 @@
 					</div>
 					<br><br><br>
 					<span>to</span>
-					<label class="select">
+					<div class="select">
 						<select name=lang form=order-form>
 							<option value=ar selected>Arabic</option> 
 							<option value=fa>Farsi</option>
 							<option value=ua>Ukrainian</option>
 						</select>
-					</label>
-					<label class="select">
+					</div>
+					<div class="select">
 						<select name=lang form=order-form>
 							<option value=ar selected>Kurdish</option> 
 							<option value=fa>Farsi</option>
 							<option value=ua>Ukrainian</option>
 						</select>
-					</label>
+					</div>
 					<a href="#" role=button><i class="fa fa-trash" aria-hidden="true"></i></a>
 					<button><i class="fa fa-plus" aria-hidden="true"></i>Add</button>
 				</fieldset>
@@ -150,27 +150,68 @@
 					<fieldset class="urgency">
 						<legend><span class="circled-num">4</span>Tell us how urgent this job is</legend>
 						<div id="range">
-						<input type="range" min=1 max=3 value=2>
+							<input type="range" min=1 max=3 value=2>
 						</div>
-					<section>
-						<h1><i class="fa fa-info-circle" aria-hidden="true"></i>Timeline info</h1>
-						<p class="info-snippet">
-							With an <span>average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
-						</p>
-					</section>
+						<section>
+							<h1><i class="fa fa-info-circle" aria-hidden="true"></i>Timeline info</h1>
+							<p class="info-snippet">
+								With an <span>average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
+							</p>
+						</section>
 					</fieldset>
 				</section>
-					<fieldset class="sign-up">
-						<legend><span class="circled-num">5</span>Sign up and choose your payment method</legend>
-						<p>Already have an account with us? <a href="#">Sign in<a>.</p>
-					</fieldset>
-			</form>				
-		</section>
-	</article>
-
-
-</main>
-
-
-</body>
+				<fieldset class="sign-up">
+					<legend><span class="circled-num">5</span>Sign up and choose your payment method</legend>
+					<p>Already have an account with us? <a href="#">Sign in<a>.</p>
+					<ul class="clearfix">
+						<li>
+							<label for=full-name>Full name</label>
+							<input type="text" name="full-name" id=full-name>
+						</li>
+						<li>
+							<label for=email>Email address</label>
+							<input type="email" name="email" id=email>
+						</li>
+						<li>
+							<label for=email>Choose password</label>
+							<input type="password" name="email" id=email>
+						</li>
+					</ul>
+					<section class="payment-method clearfix">
+						<label class=bank-card for=bank-card>
+							<input type=radio name=payment id=bank-card checked=checked></label>
+							<label class="paypal" for=paypal>
+								<input type=radio name=payment id=paypal></label>
+								<label class=amazon for=amazon>
+									<input type=radio name=payment id=amazon>
+								</label>
+					</section>
+					<section class="chosen-payment">
+					 <ul>
+						<li><label for=card-num>Card number</label>
+							<input type="text" name="card" id=card-num></li>
+							<li><label for=exp-date>Expiary date</label>
+								<input type="date" name="exp-date" id=exp-date></li>
+								<li><label for=ccv-code>Code</label>
+									<input type="text" name="ccv-code" id=ccv-code></li>
+								</ul>				
+					</section>
+				</fieldset>
+					<footer>
+					<section class="order-buttons">
+						<ul>
+							<li>
+							<label for=terms><input type="checkbox" checked=checked name=terms id=terms>
+							I agree to the terms and conditions</label>
+							</li>
+							<li><a href="#" role=button class=place-order>Place order</a></li>
+							<li><a href="#" role=button class=print-quote>Print a Quote</a></li>
+						</ul>
+					</section>
+					</footer>
+					</form>					
+				</section>
+			</article>
+		</main>
+	</body>
 </html>
