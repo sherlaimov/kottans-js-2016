@@ -2,49 +2,42 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Homework 02 | Styling a form</title>
+	<title>Homework 03-04 | Styling a form</title>
 </head>
-<link rel="stylesheet" type="text/css" href="node_modules/css-reset-and-normalize/css/reset-and-normalize.css">
-<!-- <link rel="stylesheet" type="text/css" href="node_modules/cd-font-awesome/index.css"> -->
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
-<script src="test.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/reset-and-normalize.min.css">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script src="./js/test.js"></script>
+<script src="./js/jquery.card.js"></script>
 <body>
+	<header class=top-buttons>
+			<a href="#" role=button><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Go back</a>
+			<a href=# class=logo ><img src="./img/logo.png"></a>
+			<a href="#" role=button><i class="fa fa-user" aria-hidden="true"></i>Sign in</a>
+	</header>
 	<main>
-		<nav>
-			<ul>
-				<li><a href="#" role=button>Go back</a></li>
-				<li><a href="#" role=button>Sign in</a></li>
-			</ul>
-		</nav>
 		<article>
 			<aside class="order-details clearfix">
-				<section class="breakdown ">
+				<section class="breakdown">
 					<h1><i class="fa fa-file-text" aria-hidden="true"></i> Your order</h1>
-					<dl>
-						<dt>Items</dt>
-						<dd>
-							2 documents
-						</dd>
-					</dl>
-					<dl>
-						<dt>Details</dt>
-						<dd>
-							2 languages
-						</dd>
-					</dl>
-					<dl>
-						<dt>Price</dt>
-						<dd>
-							$ 693.06
-						</dd>
-					</dl>
-					<dl>
-						<dt>Delivery</dt>
-						<dd>
-							48 hours <sup>*</sup>
-						</dd>
-					</dl>
+					<table>
+						<thead>
+							<tr>
+								<th>Items</th>
+								<th>Details</th>
+								<th>Price</th>
+								<th>Delivery</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2 documents</td>
+								<td>2 languages</td>
+								<td>$ 693.06</td>
+								<td>48 hours <sup>*</sup></td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 				<section class="order-buttons">
 					<ul>
@@ -191,11 +184,12 @@
 						<li><label for=card-num>Card number</label>
 							<input type="text" name="card" id=card-num></li>
 							<li><label for=exp-date>Expiary date</label>
-								<input type="date" name="exp-date" id=exp-date></li>
-								<li><label for=ccv-code>Code</label>
-									<input type="text" name="ccv-code" id=ccv-code></li>
-								</ul>				
+							<input type="text" name="exp-date" id=exp-date></li>
+							<li><label for=ccv-code>Code</label>
+							<input type="text" name="ccv-code" id=ccv-code></li>
+					</ul>
 					</section>
+					<div class="card-wrapper"></div>
 				</fieldset>
 					<footer>
 					<section class="order-buttons">

@@ -1,4 +1,4 @@
-@import './../node_modules/cd-font-awesome/index.css';
+@import './index.css';
 
 /*GLOBAL STYLES*/
 
@@ -17,13 +17,11 @@ html{
 body {
 	font-family: 'Open sans', Arial, Helvetica, sans-serif;
 	margin-bottom: 6rem;
-}
-
-main{
 	margin: 0 auto;
 	max-width: 1200px;
-
 }
+
+
 h1, h2, h3 {
 	font-size: 3rem;
 	color: #6E768F;
@@ -40,49 +38,49 @@ main article {
 	background-color: #fff;
 	border: .2rem solid #C9D0E1;
 	border-radius: .5rem;
-
 }
 
-main nav {
-	height: 150px;
+
+.fa {
+	color: #A5ABC5;
+}
+
+.top-buttons {
+	height: 160px;
 	margin-top: 2rem;
 	vertical-align: middle;
+	display: flex;
+	justify-content: space-between;
 }
 
 
-main nav ul li {
-	list-style: none;
-	float: left;
-	vertical-align: middle;
-}
-
-main nav ul li:last-child {
-	float: right;
-}
-
-main nav ul li a {
+.top-buttons a {
 	display: block;
-	padding: 15px;
+	padding: 2rem 4rem;
 	text-decoration: none;
 	text-transform: uppercase;
 	border: 2px solid #C9D0E1;
 	border-radius: 5px;
 	color: #C9D0E1;
 	font-size: 1.5rem;
+	height: 40%;
 }
-.fa {
-	color: #A5ABC5;
+a.logo {
+	border: none;
+	padding: 0
 }
+.logo img {
+	width: 65%;
+}
+header .fa {
+	font-size: 1.6rem;
+	margin-right: 1rem;
+}
+
 /*ORDER DETAILS*/
 .order-details {
-	/*height: 100px;*/
 	display: block;
 	border-bottom: 1px solid #C9D0E1;
-	/*	padding-left: 4rem;*/
-	/*outline: 1px solid #4BEF30;*/
-	/*background-color: #CAF5FA;*/
-/*	position: relative;
-width:100%;*/
 
 }
 .order-details  h1 {
@@ -105,23 +103,6 @@ width:100%;*/
 	padding-left: 5rem
 }
 
-.breakdown dl {
-	float: left;
-	margin-right: 4.5rem;
-	color: #6E768F;
-}
-
-.breakdown dl:last-child {
-	margin-right: 0;
-}
-
-.breakdown dl dt {
-	font-weight: 500;
-	font-size: 1.4rem;
-	text-transform: uppercase;
-	margin-bottom: 2rem;
-}
-
 .clearfix:before, .clearfix:after  {
 	display: table;
 	content: ' ';
@@ -135,14 +116,11 @@ width:100%;*/
 	width: 20%;
 	display: block;
 	float: left;
-	padding: 3.5rem;
-	padding-left: 0;
-	padding-right: 3rem;
-	border-right: 1px solid #C9D0E1;;
+	padding-right: 5rem;
+	padding-top: 4rem;
 }
 .order-buttons ul li {
 	margin-bottom: 1rem;
-	/*width: 80%;*/
 }
 
 .order-buttons a[role=button]{
@@ -168,7 +146,8 @@ width:100%;*/
 	float: left;
 	padding: 3.5rem;
 	padding-left: 5rem;
-	padding-bottom: 2rem;
+	padding-bottom: 3rem;
+	border-left: 1px solid #C9D0E1;
 }
 
 .help h1 {
@@ -192,7 +171,7 @@ width:100%;*/
 	text-decoration: underline;
 }
 .form-body {
-	padding: 3.5rem;
+	padding: 3.5rem 6rem;;
 }
 
 /*FORM*/
@@ -201,9 +180,7 @@ fieldset{
 	padding: 2rem 6rem;
 
 }
-/*.translation-type {
-margin: 2rem auto;
-}*/
+
 .form-body{
 	/*text-align: center;*/
 }
@@ -211,7 +188,6 @@ margin: 2rem auto;
 	margin-bottom: 2rem;
 	position: relative;
 	text-align: center;
-	/*border-bottom: 1px solid #C9D0E1;*/
 }
 .form-body > h1:after {
 	position: absolute;
@@ -231,7 +207,6 @@ margin: 2rem auto;
 	width: 31%;
 	height: 265px;
 	background-color: #F7F7FA;
-	/*margin: 0 2%;*/
 	margin-left: 3.5%;
 	position: relative;
 	text-align: center;
@@ -291,7 +266,6 @@ margin: 2rem auto;
 	right: -2rem;
 	width: 33px;
 	height: 33px;
-	z-index: 1000;
 	display: none;
 }
 
@@ -375,6 +349,7 @@ table {
 	/*border-spacing: 3rem;*/
 	border-radius: 5px;
 	padding: 3rem;
+	font-size: 1.6rem;
 }
 th {
 	font-size: 1.7rem;
@@ -382,16 +357,13 @@ th {
 
 }
 th, td {
-
 	text-align: left;
-	/*border: 1px solid #ccc;*/
 	line-height: 1rem;
 	padding: 2rem;
 
 }
 td {
 	cursor: pointer;
-	font-size: 1.8rem;
 }
 
 td .fa {
@@ -402,6 +374,25 @@ tbody tr:hover {
 	background-color: #EDF0F5;
 }
 
+
+.breakdown table {
+	border: none;
+	font-size: 1.6rem;
+	padding: 0;
+}
+
+.breakdown tbody tr:hover {
+	background-color: inherit;
+}
+.breakdown td {
+	cursor: default;
+	padding: 1.3rem;
+}
+.breakdown th {
+	padding: 1.3rem;
+	padding-top: 0;
+	color: #6E768F;
+} 
 .select{
 	position: relative;
 	margin-left: 2rem;
@@ -586,7 +577,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 	color: #EDBE76;
 	font-weight: 600;
 }
-
+.sign-up {
+	position: relative;
+}
 .sign-up p, .sign-up a {
 	font-size: 1.8rem;
 }
@@ -684,6 +677,13 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 	background: url('./../img/visa.png') 
 	98% 50% / 104px 60px no-repeat;
 	background-size: 16%;
+}
+
+.card-wrapper {
+	position: absolute;
+	top: 22.5rem;
+	right: 0;
+	display: none;
 }
 
 footer {
